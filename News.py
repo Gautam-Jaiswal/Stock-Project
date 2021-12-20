@@ -1,7 +1,7 @@
 import requests
 import datetime
 
-News_API_Key = '682ea97e5c6244ccab12cf3a1194103b'
+News_API_Key = 'Your API Key'
 
 today = datetime.datetime.today()
 before = datetime.datetime.today()-datetime.timedelta(days=5)

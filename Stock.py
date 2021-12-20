@@ -1,6 +1,6 @@
 import requests
 
-Stock_API_Key = '9FLLJXHWWUN690FP'
+Stock_API_Key = 'Your API Key'
 
 
 #Search for stocks having a particular keyword

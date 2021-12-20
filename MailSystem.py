@@ -4,8 +4,8 @@ import Stock
 import News
 import time
 
-Email = 'gautamjaiswal3001@gmail.com'
-Password = 'gautamrocked'
+Email = 'Your Mail'
+Password = 'Your Password'
 
 def sendMail():
     with open('data.json', 'r') as file:
@@ -19,7 +19,7 @@ def sendMail():
         yesterday = d[0]
         day_before = d[1]
         connection.sendmail(from_addr=Email,
-                            to_addrs='gautamjaiswal5001@gmail.com',
+                            to_addrs='Receiving Address',
                             msg=f'Subject:{data} {yesterday[0]} Stock Details\n\n'
                                 f'Opening: {yesterday[1]["1. open"]}\n'
                                 f'Closing: {yesterday[1]["2. high"]}\n'
@@ -27,7 +27,7 @@ def sendMail():
                                 f'Close: {yesterday[1]["4. close"]}')
         time.sleep(3)
         connection.sendmail(from_addr=Email,
-                            to_addrs='gautamjaiswal5001@gmail.com',
+                            to_addrs='Receiving Address',
                             msg=f'Subject:{data} {day_before[0]} Stock Details\n\n'
                                 f'Opening: {day_before[1]["1. open"]}\n'
                                 f'Closing: {day_before[1]["2. high"]}\n'
@@ -36,7 +36,7 @@ def sendMail():
         time.sleep(3)
         for new in news:
             connection.sendmail(from_addr=Email,
-                                to_addrs='gautamjaiswal5001@gmail.com',
+                                to_addrs='Receiving Address',
                                 msg=f'Subject:{new["title"]}\n\n'
                                     f'{new["description"]}\n'
                                     f'{new["url"]}'.encode("utf-8"))
